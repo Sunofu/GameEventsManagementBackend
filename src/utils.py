@@ -2,7 +2,7 @@ import random
 from email.mime.text import MIMEText
 from operator import truediv
 
-from backend.src.database import async_session
+from src.database import async_session
 from passlib.context import CryptContext
 import os
 from dotenv import load_dotenv

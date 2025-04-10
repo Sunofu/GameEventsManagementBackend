@@ -1,9 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from nose import with_setup
-
-from backend.src.database import async_session
+from src.database import async_session
 from sqlalchemy import text
-from backend.src.schemas import GameCreate, GetDeveloperGames
+from src.schemas import GameCreate, GetDeveloperGames
 
 game_router = APIRouter()
 

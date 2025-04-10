@@ -2,7 +2,7 @@ import pandas as pd
 from fastapi import APIRouter
 from fastapi.responses import FileResponse
 from sqlalchemy import text
-from backend.src.database import async_session
+from src.database import async_session
 import os
 import logging
 from sklearn.linear_model import LinearRegression

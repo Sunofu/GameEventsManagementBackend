@@ -5,7 +5,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from docx import Document
 import os
 from sqlalchemy import text
-from backend.src.database import async_session
+from src.database import async_session
 from datetime import datetime
 
 

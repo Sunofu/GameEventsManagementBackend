@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException
 
-from backend.src.database import async_session
+from src.database import async_session
 from sqlalchemy import text
-from backend.src.utils import hash_password, verify_password, send_email, generate_verification_code, \
+from src.utils import hash_password, verify_password, send_email, generate_verification_code, \
     save_confirmation_code, verify_confirmation_code
-from backend.src.schemas import UserCreate, LoginUser, DeveloperCreate, Subscribe, VerifyCode, ResetPassword
+from src.schemas import UserCreate, LoginUser, DeveloperCreate, Subscribe, VerifyCode, ResetPassword
 
 users_router = APIRouter()
 verification_code = 0

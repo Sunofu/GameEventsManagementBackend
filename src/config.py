@@ -4,10 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
 
-
 load_dotenv()
-
-print("Loaded DATABASE_URL:", os.getenv("DATABASE_URL"))
 
 DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
@@ -15,19 +12,15 @@ if not DATABASE_URL:
 
 Base = declarative_base()
 
-
 class RunConfig(BaseModel):
-    host: str = "0.0.0.0"
+    host: str = "127.0.0.1"
     port: int = 8000
-
 
 class ApiPrefix(BaseModel):
     prefix: str = "/api"
 
-
 class Settings(BaseSettings):
     run: RunConfig = RunConfig()
     api: ApiPrefix = ApiPrefix()
-
 
 settings = Settings()

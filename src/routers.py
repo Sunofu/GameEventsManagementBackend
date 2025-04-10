@@ -1,10 +1,10 @@
 from fastapi import APIRouter
 
-from backend.src.analytics import analytics_router
-from backend.src.report import report_router
-from backend.src.users import users_router
-from backend.src.game import game_router
-from backend.src.game_event import events_router
+from src.analytics import analytics_router
+from src.report import report_router
+from src.users import users_router
+from src.game import game_router
+from src.game_event import events_router
 
 router = APIRouter()
 

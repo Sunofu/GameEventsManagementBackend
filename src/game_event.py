@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException
 
-from backend.src.database import async_session
+from src.database import async_session
 from sqlalchemy import text
-from backend.src.schemas import GameEventCreate, GetDeveloperGames, DeleteEvent
-from backend.src.users import get_game_subscriptions
-from backend.src.utils import send_email
+from src.schemas import GameEventCreate, GetDeveloperGames, DeleteEvent
+from src.users import get_game_subscriptions
+from src.utils import send_email
 
 events_router = APIRouter()
 
